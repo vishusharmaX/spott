@@ -6,7 +6,6 @@ import Link from "next/link";
 export default function LandingPage() {
   return (
     <div>
-      <h1>Hello world</h1>
       {/* Hero Section */}
       <section className="pb-16 relative overflow-hidden">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
