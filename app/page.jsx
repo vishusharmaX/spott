@@ -1,15 +1,31 @@
-import React from "react";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import Particles from "@/components/Particles"; // <-- correct import
 
-export default function LandingPage() {
+export default function HomePage() {
   return (
     <div>
-      {/* Hero Section */}
+      {/* HERO SECTION */}
       <section className="pb-16 relative overflow-hidden">
+        {/* Background Particles (only behind hero) */}
+        <div className="absolute inset-0 -z-10">
+          <Particles
+            particleColors={["#ffffff", "#ffffff"]}
+            particleCount={200}
+            particleSpread={10}
+            speed={0.2}
+            particleBaseSize={110}
+            moveParticlesOnHover={true}
+            alphaParticles={false}
+            disableRotation={false}
+            className="w-full h-full"
+          />
+        </div>
+
+        {/* Hero Content */}
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
-          {/* Left content */}
+          {/* Left */}
           <div className="text-center sm:text-left">
             <div className="mb-6">
               <span className="text-gray-500 font-light tracking-wide">
@@ -27,46 +43,27 @@ export default function LandingPage() {
             </h1>
 
             <p className="text-lg sm:text-xl text-gray-400 mb-12 max-w-lg font-light">
-              Whether you&apos;re hosting or attending, Spott makes every event
+              Whether you're hosting or attending, Spott makes every event
               memorable. Join our community today.
             </p>
 
             <Link href="/explore">
-              <Button size="xl" className={"rounded-full"}>
+              <Button size="xl" className="rounded-full">
                 Get Started
               </Button>
             </Link>
           </div>
 
-          {/* Right - 3D Phone Mockup */}
+          {/* Right – Image */}
           <div className="relative block">
             <Image
               src="/hero.png"
-              // src="/hero.gif"
               alt="react meetup"
               width={700}
               height={700}
               className="w-full h-auto"
               priority
             />
-            {/* <video
-              width="100%"
-              height="100%"
-              loop
-              playsInline
-              autoPlay
-              muted
-              className="w-full h-auto"
-            >
-              <source
-                src="https://cdn.lu.ma/landing/phone-dark.mp4"
-                type="video/mp4;codecs=hvc1"
-              />
-              <source
-                src="https://cdn.lu.ma/landing/phone-dark.webm"
-                type="video/webm"
-              />
-            </video> */}   
           </div>
         </div>
       </section>
