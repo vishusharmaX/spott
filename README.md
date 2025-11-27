@@ -2,7 +2,7 @@
 
 A modern, full-stack Next.js 16 application built with cutting-edge technologies like React 19, Clerk Authentication, Convex Backend, TailwindCSS, Radix UI, and Google Generative AI. This project follows the App Router structure and supports server components, dynamic routing, and optimized fonts.
 
-![Spott Preview](https://via.placeholder.com/1200x630/000000/FFFFFF?text=Spott+Preview)
+![Spott Preview](https://github.com/user-attachments/assets/5c0c299a-f723-4661-a72a-c2cce16b2cc9)
 
 ## 🚀 Features
 
